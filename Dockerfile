@@ -21,6 +21,7 @@ FROM node:20-alpine3.20 AS runner
 WORKDIR /usr/src/app
 
 COPY package.json yarn.lock ./
+COPY public ./public
 
 RUN yarn install --prod
 
